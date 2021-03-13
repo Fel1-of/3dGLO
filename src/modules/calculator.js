@@ -16,9 +16,9 @@ const calculator = (price = 100) => {
 
         const typeValue = +calcType.options[calcType.selectedIndex].value,
             squareValue = +calcSquare.value;
-
         if (calcCount.value > 1) {
             countValue += (calcCount.value - 1) / 10;
+            
         }
 
         if (calcDay.value && calcDay.value < 5) {
@@ -28,7 +28,7 @@ const calculator = (price = 100) => {
         }
 
         if (typeValue && squareValue) {
-            total = price * typeValue * squareValue * countValue * dayValue;
+            total = Math.floor(price * typeValue * squareValue * countValue * dayValue);
         }
 
         let x = 1;

@@ -14,7 +14,8 @@ function countTimer() {
             lefthours = 24 + (Math.floor(timeRemaining / 60 / 60) - 24);
 
         if (lefthours < 0) {
-            deadlineCounter();
+            date = new Date();
+            deadline = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate() + 1}`;
             return;
         }
 
@@ -35,6 +36,10 @@ function countTimer() {
 
         return getTime(timeRemaining, seconds, minutes, hours);
     }
+    let timer = getTimeRemaining();
+    timeHours.textContent = timer.hours;
+    timeMinutes.textContent = timer.minutes;
+    timeSeconds.textContent = timer.seconds;
 
     const updateClock = setInterval(() => {
         let timer = getTimeRemaining();

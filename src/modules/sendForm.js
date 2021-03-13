@@ -38,6 +38,7 @@ const sendForm = (selector) => {
         statusMessage.textContent = '';
         statusMessage.classList.add('sk-pulse');
         statusMessage.style.cssText = 'margin: auto';
+        
 
 
         const formData = new FormData(form);
@@ -56,7 +57,9 @@ const sendForm = (selector) => {
                 if (response.status !== 200) {
                     throw new Error(`Что-то пошло не так, код ошибки - ${response.status}`);
                 }
+                
                 statusMessage.textContent = successMessage;
+                statusMessage.style.color = "#FFFFFF";
                 updatePage();
             })
             .catch((error) => {

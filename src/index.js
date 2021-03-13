@@ -12,40 +12,43 @@ import changePhoto from './modules/changePhoto';
 import validation from './modules/validation';
 import calculator from './modules/calculator';
 import sendForm from './modules/sendForm';
-
-
-//Timer
-countTimer();
-
-
-//Menu 
-toggleMenu();
-
-
-//Popup
-togglePopUp();
-
-
-//Tabs 
-tabs();
-
-
-//Slider
-slider();
+document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//change photo
-changePhoto();
-
-//valid
-validation();
+    //Timer
+    countTimer();
 
 
-// Calculator
-calculator(100);
- 
-//send-ajax-form
-sendForm('form1');
-sendForm('form2');
-sendForm('form3');
+    //Menu 
+    toggleMenu();
+
+
+    //Popup
+    togglePopUp();
+
+
+    //Tabs 
+    tabs();
+
+
+    //Slider
+    slider();
+
+
+
+    //change photo
+    changePhoto();
+
+    //valid
+    validation();
+
+
+    // Calculator
+    calculator(100);
+    
+    //send-ajax-form
+    sendForm('form1');
+    sendForm('form2');
+    sendForm('form3');
+});
