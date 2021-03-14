@@ -12,9 +12,12 @@ import changePhoto from './modules/changePhoto';
 import validation from './modules/validation';
 import calculator from './modules/calculator';
 import sendForm from './modules/sendForm';
+import sliderCarousel from './modules/sliderCarousel.js';
 document.addEventListener('DOMContentLoaded', () => {
 
 
+    //sliderCarousel
+    sliderCarousel();
 
     //Timer
     countTimer();
